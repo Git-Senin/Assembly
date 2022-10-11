@@ -6,14 +6,14 @@
 ExitProcess PROTO, dwExitCode:DWORD
 
 .data
-array1 WORD 1111h, 2222h, 3333h, 4444h, 5555h, 6666h
+array1 WORD 0AAAAh, 0BBBBh, 0CCCCh, 0AAAAh, 0AAAAh
 array2 WORD LENGTHOF array1 DUP(?)
-
 
 .code
 main PROC
     
     mov ecx, LENGTHOF array1    ; Original Length to counter
+
 
     mov esi, OFFSET array1      ; array1 start address to esi
     add esi, SIZEOF array1      ; esi past end of array1 address
