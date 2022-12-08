@@ -40,7 +40,7 @@ START_OF_PROGRAM:
     CMP eax, 2
     JNE FILE_EXISTS
 
-    ; Error Message
+        ; Error Message
     PUSH LENGTHOF ERROR_MESSAGE 
     PUSH OFFSET ERROR_MESSAGE
     CALL WriteOutput
@@ -91,7 +91,7 @@ START_OF_PROGRAM:
     CALL WriteOutput
 
     ; Repeat from step 2
-    JMP START_OF_PROGRAM
+    JMP FILE_EXISTS
 END_OF_PROGRAM:
     INVOKE CloseHandle, fileHandle
     INVOKE ExitProcess, 0
